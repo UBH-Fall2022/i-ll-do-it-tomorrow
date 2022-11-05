@@ -5,9 +5,12 @@
     "manifest_version": 3,
     "author": "Shreyas and Ria Inc.",
 	"permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
-	"host_permissions": [""],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self'"
+    },
+	// "host_permissions": ["/index/popup.html"],
     "action":{
-        "default_popup": "extension.html",
+        "default_popup": "/index/popup.html",
         "default_title": "Title Waiting"
     }
     
