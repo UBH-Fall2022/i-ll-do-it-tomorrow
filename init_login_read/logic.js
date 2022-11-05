@@ -47,7 +47,7 @@ function c_make(survey_dict, ai_determined_quotient){
     // for
 }
 
-//ALGORITHIM- account for avg hours, ability quotient, later acc for laziness quotient
+//ALGORITHM- account for avg hours, ability quotient, later acc for laziness quotient
 function hours_calc(a,b,c){
     hours=(a+b)/2
     rconst=Math.random(1,3)+2^(Math.random(1,28)%3)+9/(2*Math.random(8,12))
