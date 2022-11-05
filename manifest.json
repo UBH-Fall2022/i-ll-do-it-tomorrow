@@ -12,6 +12,16 @@
     "action":{
         "default_popup": "/index/popup.html",
         "default_title": "Title Waiting"
-    }
-    
+    },
+    "default_icon": {
+        "16": "index/calendar-week.png",
+        "32": "index/calendar-week.png",
+        "128": "index/calendar-week.png"
+        },
+        "icons": {
+        "16": "index/calendar-week.png",
+        "32": "index/calendar-week.png",
+        "48": "index/calendar-week.png",
+        "128": "index/calendar-week.png"
+        }
 }
