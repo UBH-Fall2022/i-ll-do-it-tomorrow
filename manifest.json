@@ -7,7 +7,7 @@
 	"permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
 	"host_permissions": [""],
     "action":{
-        "default_popup": "index.html",
+        "default_popup": "extension.html",
         "default_title": "Title Waiting"
     }
     
