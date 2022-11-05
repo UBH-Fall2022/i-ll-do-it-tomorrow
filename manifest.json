@@ -1,0 +1,14 @@
+{
+    "name": "Name waiting",
+    "version": "0.0.0",
+    "description": "Desc Waiting",
+    "manifest_version": 3,
+    "author": "Shreyas and Ria Inc.",
+	"permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+	"host_permissions": [""],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Title Waiting"
+    }
+    
+}
