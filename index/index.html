@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/e65aa6b8d1.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="container-sm" align="center" onload="initial()">
+<div class="container-sm" align="center">
   <br>
   <h1 align="left">Page Title</h1>
   <br>
@@ -19,27 +19,33 @@
     <form align="left">
       <input type="text" id="ubit">
       <br>
-      <button onclick="show()">Submit</button>
+      <button onclick="toggleCalendar()">Submit</button>
     </form>
+    <hr>
   </div>
 
   <script>
-    function initial() {
-      document.getElementById("calendar").hidden = true
-    }
-  </script>
+    function toggleCalendar() {
+      var calendar = document.getElementById("calendar");
 
-  <script>
-    function show() {
-      document.getElementById("calendar").hidden = false
+      var displaySetting = calendar.style.display;
+
+      if (displaySetting == 'block') {
+        calendar.style.display = 'none';
+      }
+      else {
+        calendar.style.display = 'block';
+      }
       document.getElementById("form").hidden = true
-    }
   </script>
 
   <div id="calendar">
     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=YWJhNmZiNTQ0M2JmNGY5ZDY0YTdhNmUzZDY1ZDYxNDk3NGMzMDg4YzFmNDZiMWQyNGYyYWFlOGNkMjdhYjM1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23A79B8E" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     <!-- <br>
     <a href="popup.html">Link</a> -->
+    <br>
+    <a align="right" class="fa fa-shuffle" aria-hidden="true" href="settings.html"></a>
+    <a href="#">Shuffle Schedule Options</a>
     <br>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW-bAKPAb61CkGY0rPfJcxr3NOsuGFLDsyT_vX8zWkqh2j0A/viewform">Add Completed Project to Record</a>
   </div>
@@ -53,6 +59,7 @@
 </div>
 
 <style>
+  [hidden] { display: none !important; }
   a:link { text-decoration: none; }
   a:visited { text-decoration: none; }
   a:hover { text-decoration: none; }
