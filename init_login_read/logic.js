@@ -21,6 +21,7 @@ CODE FUNCTIONS-
     */
 
 //GLOBAL VARIABLES
+
 master_dict={}
 instructed_hrs=0
 known_hrs=0
@@ -28,6 +29,8 @@ known_hrs=instructed_hrs//change this later once the dataset is known
 assumed_skill=0
 credit_hrs=0
 js_skill=0;
+return_dict={}
+syll_dict={}
 
 
 
@@ -40,21 +43,27 @@ function csv_read(csv){
 function datamaker(survey_dict){
     survey_dict_name=survey_dict["UBIT Name"]
     master_dict[survey_dict_name]=survey_dict
+    return survey_dict_name
 }
+
+
+
 
 //find algorithmic quotient of ability
 function c_make(survey_dict, ai_determined_quotient){
-    // for
+    const customPrediction = linRegressions.predict(tempInCelsius);
+    return customPrediction;
 }
 
-//ALGORITHM- account for avg hours, ability quotient, later acc for laziness quotient
+//ALGORITHIM- account for avg hours, ability quotient, later acc for laziness quotient
 function hours_calc(a,b,c){
     hours=(a+b)/2
     rconst=Math.random(1,3)+2^(Math.random(1,28)%3)+9/(2*Math.random(8,12))
     rconst+=Math.random((1,4))%2-1
     hours+=rconst
-    hours=(hours+c/2)
+    hours=(hours+bias/2)
 }
+
 
 
 
