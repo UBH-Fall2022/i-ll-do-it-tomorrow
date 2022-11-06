@@ -34,12 +34,17 @@
       <div id="projectbox">
         <h6 id="classnum">Number of Classes: </h6>
         <h6 id="actualnum"></h6>
-
-        <h6></h6>
+        <br>
+        <h6>Project 1: </h6>
+        <h6>Class Name: </h6>
+        <h6 id="name"></h6>
+        <h6>Hours Left:</h6>
+        <h6 id="hoursleft"></h6>
       </div>
       <script>
         document.getElementById("actualnum").innerHTML = numberOfClasses
-        document
+        document.getElementById("name").innerHTML = ""
+        document.getElementById("hoursleft").innerHTML = hours
       </script>
       <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
       <a href="#">Shuffle Schedule Options</a>
@@ -67,7 +72,7 @@ js_skill=0;
 return_dict={}
 syll_dict={}
 numberOfClasses=0
-
+hours=0
 
 //Implement csv_read
 
