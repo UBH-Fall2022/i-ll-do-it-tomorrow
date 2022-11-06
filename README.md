@@ -1,5 +1,5 @@
 - Link to website: https://ubh-fall2022.github.io/i-ll-do-it-tomorrow
-- Domain link: illdoittomorrow.com (not operational)
+- Domain link: illdoittomorrow.tech (not operational)
 
 ## Inspiration
 
