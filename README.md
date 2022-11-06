@@ -35,3 +35,6 @@ We learned so much about how to effectively manage moving parts of a large progr
 ## What's next for I'll Do It Tomorrow
 
 One of the main things we want I'll Do It Tomorrow to do is to send notifications to users reminding them of their work, but with a catch — using our list of whitelisted websites (like netflix.com, instagram.com, etc.), we would send the user a notification reminding them of their work when they clearly are _not_ doing their work. In addition, we hope to train the AI model with hundreds of responses from new users so it much more accurately predicts what a user needs as far as time, and to expand the functionality to many more classes and other user priorities that could affect their project journeys.
+
+
+<img width="1440" alt="Screen Shot 2022-11-06 at 13 38 20-min" src="https://user-images.githubusercontent.com/74742605/200189905-30475198-91a0-4cd9-922b-1776e96be1c4.png">
