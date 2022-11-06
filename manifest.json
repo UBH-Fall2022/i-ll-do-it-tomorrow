@@ -8,11 +8,6 @@
     "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self'"
     },
-    "content_scripts": [
-        {
-            "js": ["fontawesome.js"]
-        }
-    ],
     "action":{
         "default_popup": "/index/popup.html",
         "default_title": "Title Waiting"
