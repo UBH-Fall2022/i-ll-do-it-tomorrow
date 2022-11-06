@@ -104,6 +104,9 @@
   <div id="calendar" class="row">
     <div class="col" align="left">
       <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=YWJhNmZiNTQ0M2JmNGY5ZDY0YTdhNmUzZDY1ZDYxNDk3NGMzMDg4YzFmNDZiMWQyNGYyYWFlOGNkMjdhYjM1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23A79B8E" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+      <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
+      <a href="#">Shuffle Schedule Options</a>
+      <br>
     </div>
     <div class="col" align="left">
       <h4>Project Dashboard</h4>
@@ -116,15 +119,21 @@
         <h6 id="name"></h6>
         <h6>Hours Left:</h6>
         <h6 id="hoursleft"></h6>
+        <br>
+        <h6>Project 2: </h6>
+        <h6>Class Name: </h6>
+        <h6 id="name2"></h6>
+        <h6>Hours Left:</h6>
+        <h6 id="hoursleft2"></h6>
       </div>
       <script>
-        document.getElementById("actualnum").innerHTML = numberOfClassesMaker()
-        document.getElementById("name").innerHTML = "CSE placeholder"
+        document.getElementById("actualnum").innerHTML = numberOfClasses
+        document.getElementById("name").innerHTML = "CSE 220"
+        document.getElementById("name2").innerHTML = "CSE 250"
         document.getElementById("hoursleft").innerHTML = hoursvar
+        document.getElementById("hoursleft2").innerHTML = hoursvar+10
       </script>
-      <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
-      <a href="#">Shuffle Schedule Options</a>
-      <br>
+      <a align="right" class="fa fa-save" aria-hidden="true" href="shttps://docs.google.com/forms/d/e/1FAIpQLSeW-bAKPAb61CkGY0rPfJcxr3NOsuGFLDsyT_vX8zWkqh2j0A/viewform"></a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW-bAKPAb61CkGY0rPfJcxr3NOsuGFLDsyT_vX8zWkqh2j0A/viewform">Add Completed Project to Record</a>
     </div>
   </div>
