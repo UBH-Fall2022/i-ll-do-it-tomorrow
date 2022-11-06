@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "/Users/riagupta/ubh-fall2022-repotemplate-rg663",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}
