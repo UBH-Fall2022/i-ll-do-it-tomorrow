@@ -34,9 +34,12 @@
       <div id="projectbox">
         <h6 id="classnum">Number of Classes: </h6>
         <h6 id="actualnum"></h6>
+
+        <h6></h6>
       </div>
       <script>
         document.getElementById("actualnum").innerHTML = numberOfClasses
+        document
       </script>
       <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
       <a href="#">Shuffle Schedule Options</a>
@@ -54,7 +57,7 @@
 </div>
 
 <script>
-  master_dict={}
+master_dict={}
 instructed_hrs=0
 known_hrs=0
 known_hrs=instructed_hrs//change this later once the dataset is known
@@ -89,7 +92,7 @@ function numberOfClassesMaker(numberOfClasses){
     else{
         numberOfClasses+=1;
     }
-    return numberOfClasses;
+    return numberOfClasses+1;
 }
 
 //find algorithmic quotient of ability
