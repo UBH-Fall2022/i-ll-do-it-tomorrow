@@ -11,6 +11,80 @@
   <script src="https://kit.fontawesome.com/e65aa6b8d1.js" crossorigin="anonymous"></script>
 </head>
 
+<script>
+  master_dict={}
+  instructed_hrs=0
+  known_hrs=0
+  known_hrs=instructed_hrs//change this later once the dataset is known
+  assumed_skill=0
+  credit_hrs=0
+  js_skill=0;
+  return_dict={}
+  syll_dict={}
+  numberOfClasses=2
+  hours=0
+  hoursvar=0
+  
+  //Implement csv_read
+  
+  function csv_read(csv){
+      survey_dict=$.csv.toObjects(csv);
+  }
+  csv_read("https://docs.google.com/spreadsheets/d/e/2PACX-1vQrph8KKoLylt9cag4c5nj_hY3CxjEINon_Jq2ScwOPXEjPzb48XGL5ZcEJd2QZpPMCMRO7QqsnRV76/pub?gid=246267371&single=true&output=csv")
+  //for the AI training model
+  function datamaker(survey_dict){
+      survey_dict_name=survey_dict["UBIT Name"]
+      master_dict[survey_dict_name]=survey_dict
+      return survey_dict_name
+  }
+  
+  
+  function numberOfClassesMaker(numberOfClasses){
+      if(survey_dict["Classes"]>=6 && csurvey_dict["Classes"]<14 ){
+          numberOfClasses+=2;
+      }
+      else if(csurvey_dict["Classes"]>=14 ){
+          numberOfClasses+=2;
+      }
+      else{
+          numberOfClasses+=1;
+      }
+      return numberOfClasses+1;
+  }
+  
+  //find algorithmic quotient of ability
+  function c_make(survey_dict){
+      const customPrediction = linRegressions.predict(tempInCelsius);
+      return customPrediction;
+  }
+  
+  //ALGORITHIM- account for avg hours, ability quotient, later acc for laziness quotient
+  function hours_calc(a,b,c){
+      hours=(a+b)/2
+      rconst=Math.random(1,3)+2^(Math.random(1,28)%3)+9/(2*Math.random(8,12))
+      rconst+=Math.random((1,4))%2-1
+      hours+=rconst*survey_dict["Proficiency[Python]"]
+      hours=((hours+c)/2)
+      return hours
+  }
+  hoursvar=hours_calc(syll_dict["Professor Hrs"],syll_dict["Professor Hrs"],c_make(survey_dict))
+  function daySplit(){
+      reqDays=hours_calc(syll_dict["reqhrs"],master_dict[survey_dict],c_make)
+      daySplit1=(reqDays/4)+Math.random(2,2);
+      return daySplit
+  }
+  
+  function monthDatasetMaker(daysDict){
+      dueDate=syll_dict["Due Date"]
+      startDate=dueDate-daySplit()
+     for (m of Range(0,daySplit)){
+          daysDict[m]="CODE TODAY!!!!!!!!!!!!!!!!!!!"
+     }
+  
+  }
+  
+  </script>
+
 <div class="container-sm" align="center">
   <br>
   <h1 align="left">Page Title</h1>
@@ -70,7 +144,7 @@ assumed_skill=0
 credit_hrs=0
 js_skill=0;
 return_dict={}
-syll_dict={"Professor Hrs":20}
+syll_dict={}
 numberOfClasses=2
 hours=0
 
