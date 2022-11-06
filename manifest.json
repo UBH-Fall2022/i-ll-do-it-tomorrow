@@ -4,7 +4,7 @@
     "description": "Desc Waiting",
     "manifest_version": 3,
     "author": "Shreyas and Ria Inc.",
-	"permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+	"permissions": ["storage", "declarativeContent", "activeTab", "scripting","notifications"],
     "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self'"
     },
@@ -16,11 +16,17 @@
         "16": "index/calendar-week.png",
         "32": "index/calendar-week.png",
         "128": "index/calendar-week.png"
-        },
-        "icons": {
+    },
+    "icons": {
         "16": "index/calendar-week.png",
         "32": "index/calendar-week.png",
         "48": "index/calendar-week.png",
         "128": "index/calendar-week.png"
-        }
+    },
+    "content_scripts": [
+    {
+      "matches": ["facebook.com*", "youtube.com*"],
+      "js": ["myscript.js"]
+    }
+  ]
 }
