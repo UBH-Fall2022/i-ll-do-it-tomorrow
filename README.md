@@ -1,3 +1,6 @@
+- Link to website: https://ubh-fall2022.github.io/i-ll-do-it-tomorrow
+- Domain link: illdoittomorrow.com (not operational)
+
 ## Inspiration
 
 Given our increasing workload and inability to divide our time appropriately across multiple projects due at similar times, we thought, why not create a model that calculates this for us?
