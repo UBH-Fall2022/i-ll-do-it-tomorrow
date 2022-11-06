@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="calendar-week.png">
+  <script src="../init_login_read/logic.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  <link rel="stylesheet" type="text/css" href="/style.css">
   <script src="https://kit.fontawesome.com/e65aa6b8d1.js" crossorigin="anonymous"></script>
@@ -19,31 +20,24 @@
     <form align="left">
       <input type="text" id="ubit">
       <br>
-      <button onclick="toggleCalendar()">Submit</button>
+      <button>Submit</button>
     </form>
     <hr>
   </div>
 
-  <script>
-    function toggleCalendar() {
-      var calendar = document.getElementById("calendar");
-
-      var displaySetting = calendar.style.display;
-
-      if (displaySetting == 'block') {
-        calendar.style.display = 'none';
-      }
-      else {
-        calendar.style.display = 'block';
-      }
-      document.getElementById("form").hidden = true
-  </script>
-
   <div id="calendar" class="row">
     <div class="col" align="left">
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=YWJhNmZiNTQ0M2JmNGY5ZDY0YTdhNmUzZDY1ZDYxNDk3NGMzMDg4YzFmNDZiMWQyNGYyYWFlOGNkMjdhYjM1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23A79B8E" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=YWJhNmZiNTQ0M2JmNGY5ZDY0YTdhNmUzZDY1ZDYxNDk3NGMzMDg4YzFmNDZiMWQyNGYyYWFlOGNkMjdhYjM1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23A79B8E" style="border-width:0" width="300" height="150" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class="col" align="left">
+      <h4>Project Dashboard</h4>
+      <div id="projectbox">
+        <h6 id="classnum">Number of Classes: </h6>
+        <h6 id="actualnum"></h6>
+      </div>
+      <script>
+        document.getElementById("actualnum").innerHTML = numberOfClasses
+      </script>
       <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
       <a href="#">Shuffle Schedule Options</a>
       <br>
@@ -58,6 +52,78 @@
     </div>
   </footer>
 </div>
+
+<script>
+  master_dict={}
+instructed_hrs=0
+known_hrs=0
+known_hrs=instructed_hrs//change this later once the dataset is known
+assumed_skill=0
+credit_hrs=0
+js_skill=0;
+return_dict={}
+syll_dict={}
+numberOfClasses=0
+
+
+//Implement csv_read
+
+function csv_read(csv){
+    survey_dict=$.csv.toObjects(csv);
+}
+//for the AI training model
+function datamaker(survey_dict){
+    survey_dict_name=survey_dict["UBIT Name"]
+    master_dict[survey_dict_name]=survey_dict
+    return survey_dict_name
+}
+
+
+function numberOfClassesMaker(numberOfClasses){
+    if(survey_dict["Classes"]>=6 && csurvey_dict["Classes"]<14 ){
+        numberOfClasses+=2;
+    }
+    else if(csurvey_dict["Classes"]>=14 ){
+        numberOfClasses+=2;
+    }
+    else{
+        numberOfClasses+=1;
+    }
+    return numberOfClasses;
+}
+
+//find algorithmic quotient of ability
+function c_make(survey_dict, ai_determined_quotient){
+    const customPrediction = linRegressions.predict(tempInCelsius);
+    return customPrediction;
+}
+
+//ALGORITHIM- account for avg hours, ability quotient, later acc for laziness quotient
+function hours_calc(a,b,c){
+    hours=(a+b)/2
+    rconst=Math.random(1,3)+2^(Math.random(1,28)%3)+9/(2*Math.random(8,12))
+    rconst+=Math.random((1,4))%2-1
+    hours+=rconst*survey_dict["Proficiency[Python]"]
+    hours=((hours+c)/2)
+    return hours
+}
+
+function daySplit(){
+    reqDays=hours_calc(syll_dict["reqhrs"],master_dict[survey_dict],c_make)
+    daySplit1=(reqDays/4)+Math.random(2,2);
+    return daySplit
+}
+
+function monthDatasetMaker(daysDict){
+    dueDate=syll_dict["Due Date"]
+    startDate=dueDate-daySplit()
+   for (m of Range(0,daySplit)){
+        daysDict[m]="CODE TODAY!!!!!!!!!!!!!!!!!!!"
+   }
+
+}
+
+</script>
 
 <style>
   [hidden] { display: none !important; }
