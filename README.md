@@ -1,3 +1,4 @@
+- Start here: tinyurl.com/starthereiditm
 - Link to website: https://ubh-fall2022.github.io/i-ll-do-it-tomorrow
 - Domain link: illdoittomorrow.tech (not operational)
 
