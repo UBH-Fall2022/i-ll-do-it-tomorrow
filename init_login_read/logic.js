@@ -40,6 +40,7 @@ numberOfClasses=0
 function csv_read(csv){
     survey_dict=$.csv.toObjects(csv);
 }
+
 //for the AI training model
 function datamaker(survey_dict){
     survey_dict_name=survey_dict["UBIT Name"]

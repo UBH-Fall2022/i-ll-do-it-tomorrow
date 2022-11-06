@@ -44,7 +44,7 @@
       <script>
         document.getElementById("actualnum").innerHTML = numberOfClassesMaker()
         document.getElementById("name").innerHTML = ""
-        document.getElementById("hoursleft").innerHTML = hours_calc()
+        document.getElementById("hoursleft").innerHTML = hoursvar
       </script>
       <a align="right" class="fa fa-shuffle" aria-hidden="true" href="#"></a>
       <a href="#">Shuffle Schedule Options</a>
@@ -71,7 +71,7 @@ credit_hrs=0
 js_skill=0;
 return_dict={}
 syll_dict={}
-numberOfClasses=0
+numberOfClasses=2
 hours=0
 
 //Implement csv_read
@@ -102,7 +102,7 @@ function numberOfClassesMaker(numberOfClasses){
 }
 
 //find algorithmic quotient of ability
-function c_make(survey_dict, ai_determined_quotient){
+function c_make(survey_dict){
     const customPrediction = linRegressions.predict(tempInCelsius);
     return customPrediction;
 }
@@ -116,7 +116,7 @@ function hours_calc(a,b,c){
     hours=((hours+c)/2)
     return hours
 }
-
+hoursvar=hours_calc(syll_dict["Professor Hrs"],syll_dict["Professor Hrs"],c_make(survey_dict))
 function daySplit(){
     reqDays=hours_calc(syll_dict["reqhrs"],master_dict[survey_dict],c_make)
     daySplit1=(reqDays/4)+Math.random(2,2);
