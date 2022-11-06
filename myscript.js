@@ -1,12 +1,12 @@
 if(onCertainWebsitesNeedNotificationAppearTrue) {
     // send message to background script
-    chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+    chrome.runtime.sendMessage({greeting: "hello"}, function(_response) {
 
 });
 }
 
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
+    function(request, _sender, _sendResponse) {
         //alert("good");
         if (request.greeting == "hello")
         createNotification();

@@ -25,7 +25,7 @@
     },
     "content_scripts": [
     {
-      "matches": ["facebook.com*", "youtube.com*"],
+      "matches": ["*://*.facebook.com/*", "*://*.youtube.com/*"],
       "js": ["myscript.js"]
     }
   ]
