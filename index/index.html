@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/e65aa6b8d1.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="container-sm" align="center">
+<div class="container-sm" align="center" onload="initial()">
   <br>
   <h1 align="left">Page Title</h1>
   <br>
@@ -24,13 +24,19 @@
   </div>
 
   <script>
+    function initial() {
+      document.getElementById("calendar").hidden = true
+    }
+  </script>
+
+  <script>
     function show() {
       document.getElementById("calendar").hidden = false
       document.getElementById("form").hidden = true
     }
   </script>
-  
-  <div id="calendar" hidden>
+
+  <div id="calendar">
     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=YWJhNmZiNTQ0M2JmNGY5ZDY0YTdhNmUzZDY1ZDYxNDk3NGMzMDg4YzFmNDZiMWQyNGYyYWFlOGNkMjdhYjM1MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23A79B8E" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     <!-- <br>
     <a href="popup.html">Link</a> -->
